@@ -26,13 +26,10 @@ class PlayerX extends Game{
         this.markX = 'X'
     }
 
-    setMarkX(){
-        if(this.player == 'X'){
-        const X = document.querySelector('.div1')
-        X.addEventListener('click', () =>{
-            X.textContent= this.markX
-        })
-    }
+    setMarkX(cell){
+    
+            cell.textContent= this.markX
+    
 }
 
     countX(){
@@ -45,7 +42,11 @@ class PlayerY extends Game{
         super('Y')
         this.markY = 'Y'
     }
-
+    setMarkY(cell){
+      
+            cell.textContent= this.markY
+ 
+    }
     countY(){
 
     }
@@ -54,8 +55,15 @@ class PlayerY extends Game{
 let newGame = new Game()
 let playerX = new PlayerX()
 let playerY = new PlayerY()
+let currentPlayer = playerX
 
-const div1 = document.querySelector('.div1')
-div1.addEventListener('click', () => {
-    playerX.setMarkX()
-})
+const cells = document.querySelectorAll('.cell')
+
+for(let cell of cells){
+ cell.addEventListener('click', (e) => {
+    if(e.target.textContent === ' '){
+       currentPlayer.setMarkX(e.target)
+       currentPlayer = currentPlayer === playerX ? playerY : playerX
+     }
+    })
+}
