@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hidden{
+    display: none;
+}
+.active{
+    display: block;
+}
+.mainBoard{
+    margin:0 auto;
+}
+th,td{
+    border: 5px solid;
+}
+table{
+    border-collapse: collapse;
+    width:900px;
+    height:900px;
+}

@@ -2,21 +2,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <title>tic-tac-toe</title>
 </head>
 <body>
-    <div class="mainBoard">
-        <div class="cell">div1</div>
-        <div class="cell">div2</div>
-        <div class="cell">div3</div>
-        <div class="cell">div4</div>
-        <div class="cell">div5</div>
-        <div class="cell">div6</div>
-        <div class="cell">div7</div>
-        <div class="cell">div8</div>
-        <div class="cell">div9</div>
+    <!-- this is a table containing cells, with each cell having an X and O value that will be hidden/shown on demand using the CSS and JS -->
+    <!-- there are three rows and three columns hence making 9 cells, all currently having the .hidden class indicating that they are currently not being shown -->
+    <!-- IMPORTANT active X or O's will have the class of .active -->
+    <table class="mainBoard">
+        <!-- row 1 -->
+        <tr class="row-1">
+            <td class="cell cell-1">
+                <div class="hidden X">X</div>
+                <div class="hidden O">O</div>
+            </td>
+            <td class="cell cell-2">
+                <div class="hidden X">X</div>
+                <div class="hidden O">O</div>
+            </td>
+            <td class="cell cell-3">
+                <div class="hidden X">X</div>
+                <div class="hidden O">O</div>
+            </td>
+        </tr>
+        <!-- row 2 -->
+        <tr class="row-2">
+            <td class="cell cell-1">
+                <div class="hidden X">X</div>
+                <div class="hidden O">O</div>
+            </td>
+            <td class="cell cell-2">
+                <div class="hidden X">X</div>
+                <div class="hidden O">O</div>
+            </td>
+            <td class="cell cell-3">
+                <div class="hidden X">X</div>
+                <div class="hidden O">O</div>
+            </td>
+        </tr>
+        <!-- row 3 -->
+        <tr class="row-3">
+            <td class="cell cell-1">
+                <div class="hidden X">X</div>
+                <div class="hidden O">O</div>
+            </td>
+            <td class="cell cell-2">
+                <div class="hidden X">X</div>
+                <div class="hidden O">O</div>
+            </td>
+            <td class="cell cell-3">
+                <div class="hidden X">X</div>
+                <div class="hidden O">O</div>
+            </td>
+        </tr>
 
-    </div>
+    </table>
 
     <script src="main.js"></script>
 
